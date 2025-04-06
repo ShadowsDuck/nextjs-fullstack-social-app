@@ -11,6 +11,7 @@
   "dependencies": {
     "-": "^0.0.1",
     "@clerk/nextjs": "^6.13.0",
+    "@prisma/client": "^6.5.0",
     "@radix-ui/react-dialog": "^1.1.6",
     "@radix-ui/react-slot": "^1.1.2",
     "@typescript-eslint/eslint-plugin": "^8.29.0",
@@ -39,6 +40,7 @@
     "eslint-plugin-prettier": "^5.2.6",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
+    "prisma": "^6.5.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
