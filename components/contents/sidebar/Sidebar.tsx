@@ -19,7 +19,7 @@ async function Sidebar() {
   return (
     <div className="sticky top-20">
       <Card>
-        <CardContent className="pt-6">
+        <CardContent className="pt-2">
           <div className="flex flex-col items-center text-center">
             <Link
               href={`/profile/${user.username}`}

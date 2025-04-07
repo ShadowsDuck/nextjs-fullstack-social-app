@@ -50,3 +50,13 @@ export async function getUserByClerkId(clerkId: string) {
     }
   })
 }
+
+export async function getDbUserId() {
+  const { userId:clerkId } = await auth() // userId:clerkId means rename userId -> clerkId
+  if (!clerkId) throw new Error("Unauthorized")
+
+  const user = await getUserByClerkId(clerkId) // get user.id form db
+  if (!user) throw new Error("User not found")
+
+  return user.id
+}
