@@ -24,6 +24,9 @@ function CreatePost() {
     setIsPosting(true)
     try {
       const result = await createPost(content, imageUrl)
+
+      if (!result) return
+
       if (result.success) {
         // reset the form
         setContent('')
@@ -80,12 +83,12 @@ function CreatePost() {
             >
               {isPosting ? (
                 <>
-                  <Loader2Icon className="mr-2 size-4 animate-spin" />
+                  <Loader2Icon className="size-4 animate-spin" />
                   Posting...
                 </>
               ) : (
                 <>
-                  <SendIcon className="mr-2 size-4" />
+                  <SendIcon className="size-4" />
                   Post
                 </>
               )}
